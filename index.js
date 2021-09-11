@@ -39,11 +39,6 @@ const genColor = () => {
   return pastel;
 };
 
-const drawBackground = () => {
-  ctx.fillStyle = genColor();
-  ctx.fillRect(0, 0, width, height);
-};
-
 const addMetadata = (_dna, _edition) => {
   let dateTime = Date.now();
   let tempMetadata = {
@@ -109,6 +104,11 @@ const getRace = (_editionCount) => {
   return race;
 };
 
+const RandomNumber = () =>{
+  let a = Math.random()
+  return Math.floor(a * 100);
+}
+
 const isDnaUnique = (_DnaList = [], _dna = []) => {
   let foundDna = _DnaList.find((i) => i.join("") === _dna.join(""));
   return foundDna == undefined ? true : false;
@@ -117,7 +117,7 @@ const isDnaUnique = (_DnaList = [], _dna = []) => {
 const createDna = (_races, _race) => {
   let randNum = [];
   _races[_race].layers.forEach((layer) => {
-    let randElementNum = Math.floor(Math.random() * 100);
+    let randElementNum = RandomNumber()
     let num = 0;
     layer.elements.forEach((element) => {
       if (randElementNum >= 100 - element.weight) {
@@ -160,7 +160,6 @@ const startCreating = async () => {
         elementArray.forEach((element) => {
           drawElement(element);
         });
-        signImage(`#${editionCount}`);
         saveImage(editionCount);
         addMetadata(newDna, editionCount);
         saveMetaDataSingleFile(editionCount);

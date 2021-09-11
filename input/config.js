@@ -1,12 +1,12 @@
 const fs = require("fs");
-const width = 1000;
-const height = 1000;
+const width = 3200;
+const height = 3200;
 const dir = __dirname;
-const description = "This is an NFT made by the coolest generative code.";
-const baseImageUri = "https://hashlips/nft";
+const description = "RetroGang.";
+const baseImageUri = "https://RetroPixels/nft";
 const startEditionFrom = 1;
-const endEditionAt = 10;
-const editionSize = 10;
+const endEditionAt = 5000;
+const editionSize = 5000;
 const raceWeights = [
   {
     value: "skull",
@@ -24,33 +24,26 @@ const races = {
         elements: [
           {
             id: 0,
-            name: "Light blue",
-            path: `${dir}/1-background/LightBlue.png`,
+            name: "Cyan",
+            path: `${dir}/Background/Cyan.png`,
             weight: 100,
           },
           {
             id: 1,
             name: "Orange",
-            path: `${dir}/1-background/Orange.png`,
+            path: `${dir}/Background/Oragne.png`,
             weight: 80,
           },
-        ],
-        position: { x: 0, y: 0 },
-        size: { width: width, height: height },
-      },
-      {
-        name: "Suit",
-        elements: [
           {
-            id: 0,
-            name: "Regular",
-            path: `${dir}/2-suit/Regular.png`,
-            weight: 100,
+            id: 2,
+            name: "White",
+            path: `${dir}/Background/White.png`,
+            weight: 60,
           },
           {
-            id: 1,
-            name: "Orange",
-            path: `${dir}/2-suit/Orange.png`,
+            id: 3,
+            name: "Special",
+            path: `${dir}/Background/NEW.png`,
             weight: 20,
           },
         ],
@@ -58,51 +51,162 @@ const races = {
         size: { width: width, height: height },
       },
       {
-        name: "Shoulder",
+        name: "Skin",
         elements: [
           {
             id: 0,
-            name: "LunaFlag",
-            path: `${dir}/3-shoulder/LunaFlag.png`,
-            weight: 100,
+            name: "Black",
+            path: `${dir}/Skins/Skin_Black.png`,
+            weight: 90,
           },
           {
             id: 1,
-            name: "USA",
-            path: `${dir}/3-shoulder/USA.png`,
-            weight: 90,
+            name: "White",
+            path: `${dir}/Skins/Skin_White.png`,
+            weight: 80,
+          },
+          {
+            id: 2,
+            name: "Brown",
+            path: `${dir}/Skins/Skin_Brown.png`,
+            weight: 70,
           },
         ],
         position: { x: 0, y: 0 },
         size: { width: width, height: height },
       },
       {
-        name: "Pin",
+        name: "Eyes",
         elements: [
           {
             id: 0,
-            name: "Smiley",
-            path: `${dir}/4-pin/Smiley.png`,
+            name: "White",
+            path: `${dir}/Eyes/Eyes_White.png`,
             weight: 100,
           },
           {
             id: 1,
-            name: "LunaBluePin",
-            path: `${dir}/4-pin/LunaBluePin.png`,
-            weight: 90,
+            name: "Bloodshot",
+            path: `${dir}/Eyes/Eyes_Bloodshot.png`,
+            weight: 10,
           },
         ],
         position: { x: 0, y: 0 },
         size: { width: width, height: height },
       },
       {
-        name: "Race",
+        name: "Nose",
         elements: [
           {
             id: 0,
-            name: "Skull",
-            path: `${dir}/5-skin/Skull.png`,
+            name: "Nose",
+            path: `${dir}/Nose/Nose.png`,
             weight: 100,
+          },
+         
+        ],
+        position: { x: 0, y: 0 },
+        size: { width: width, height: height },
+      },
+      {
+        name: "Mouth",
+        elements: [
+          {
+            id: 0,
+            name: "Normal",
+            path: `${dir}/Mouth/Mouth.png`,
+            weight: 100,
+          },
+        ],
+        position: { x: 0, y: 0 },
+        size: { width: width, height: height },
+      },
+      {
+        name: "Tops",
+        elements: [
+          {
+            id: 0,
+            name: "Blue Hoodie",
+            path: `${dir}/Tops/Top_Hoodie_Blue.png`,
+            weight: 100,
+          },
+          {
+            id: 1,
+            name: "Green Hoodie",
+            path: `${dir}/Tops/Top_Hoodie_Green.png`,
+            weight: 85,
+          },
+          {
+            id: 2,
+            name: "Red Hoodie",
+            path: `${dir}/Tops/Top_Hoodie_Red.png`,
+            weight: 80,
+          },
+          {
+            id: 3,
+            name: "Blue Jacket",
+            path: `${dir}/Tops/Top_Jacket_Blue.png`,
+            weight: 75,
+          },
+          {
+            id: 4,
+            name: "Green Jacket",
+            path: `${dir}/Tops/Top_Jacket_Green.png`,
+            weight: 70,
+          },
+          {
+            id: 5,
+            name: "Red Jacket",
+            path: `${dir}/Tops/Top_Jacket_Red.png`,
+            weight: 60,
+          },
+          {
+            id: 6,
+            name: "Blue Suit",
+            path: `${dir}/Tops/Top_Suit_Blue.png`,
+            weight: 55,
+          },
+          {
+            id: 7,
+            name: "Pink Suit",
+            path: `${dir}/Tops/Top_Suit_Pink.png`,
+            weight: 50,
+          },
+          {
+            id: 8,
+            name: "Red Suit",
+            path: `${dir}/Tops/Top_Suit_Red.png`,
+            weight: 40,
+          },
+          {
+            id: 9,
+            name: "Tanktop",
+            path: `${dir}/Tops/Top_tank.png`,
+            weight: 35,
+          },
+          {
+            id: 10,
+            name: "Green Tshirt",
+            path: `${dir}/Tops/Top_Tshirt_Green.png`,
+            weight: 30,
+          },
+          {
+            id: 11,
+            name: "Red Tshirt",
+            path: `${dir}/Tops/Top_Tshirt_Red.png`,
+            weight: 25,
+          },
+          {
+            id: 12,
+            name: "Tshirt",
+            path: `${dir}/Tops/Top_Tshirt.png`,
+            weight: 20,
+          },
+          {
+            id: 13,
+            name: "Diamond Armor",
+            path: `${dir}/Tops/Top_Diamond_Armor.png`,
+            weight: 10,
           },
         ],
         position: { x: 0, y: 0 },
@@ -114,8 +218,38 @@ const races = {
           {
             id: 0,
             name: "No facial hair",
-            path: `${dir}/6-facial-hair/NoFacialHair.png`,
+            path: `${dir}/Beard/No.png`,
             weight: 100,
+          },
+          {
+            id: 1,
+            name: "Black Beard",
+            path: `${dir}/Beard/Beard_Black.png`,
+            weight: 50,
+          },
+          {
+            id: 2,
+            name: "Brown Beard",
+            path: `${dir}/Beard/Beard_Brown.png`,
+            weight: 40,
+          },
+          {
+            id: 3,
+            name: "Long Beard",
+            path: `${dir}/Beard/Beard_Long.png`,
+            weight: 30,
+          },
+          {
+            id: 4,
+            name: "Normal Beard",
+            path: `${dir}/Beard/Beard_Normal.png`,
+            weight: 20,
+          },
+          {
+            id: 5,
+            name: "Shadow Beard",
+            path: `${dir}/Beard/Beard_Shadow.png`,
+            weight: 10,
           },
         ],
         position: { x: 0, y: 0 },
@@ -127,14 +261,26 @@ const races = {
           {
             id: 0,
             name: "No mask",
-            path: `${dir}/7-mask/NoMask.png`,
+            path: `${dir}/Mask/No.png`,
             weight: 100,
           },
           {
             id: 1,
-            name: "Medical",
-            path: `${dir}/7-mask/mask.png`,
-            weight: 5,
+            name: "Blue Mask",
+            path: `${dir}/Mask/Mask_Blue.png`,
+            weight: 20,
+          },
+          {
+            id: 2,
+            name: "Black Mask",
+            path: `${dir}/Mask/Mask_1.png`,
+            weight: 15,
+          },
+          {
+            id: 3,
+            name: "Cigar",
+            path: `${dir}/Mask/Mask_Cigar.png`,
+            weight: 10,
           },
         ],
         position: { x: 0, y: 0 },
@@ -144,47 +290,137 @@ const races = {
         name: "Hair",
         elements: [
           {
+            id: 5,
+            name: "Bald",
+            path: `${dir}/Hair/No.png`,
+            weight: 100,
+          },
+          {
+            
             id: 0,
-            name: "Blonde bun",
-            path: `${dir}/8-hair/BlondeBun.png`,
+            name: "Full Fade",
+            path: `${dir}/Hair/Hair_Fade.png`,
+            weight: 50,
+          },
+          {
+            id: 1,
+            name: "Hair1",
+            path: `${dir}/Hair/Hair_Hair1.png`,
+            weight: 40,
+          },
+          {
+            id: 2,
+            name: "Half Mowhawk",
+            path: `${dir}/Hair/Hair_Half_Mowhawk.png`,
+            weight: 30,
+          },
+          {
+            id: 3,
+            name: "Mowhawk",
+            path: `${dir}/Hair/Hair_Mowhawk.png`,
+            weight: 20,
+          },
+          {
+            id: 4,
+            name: "Fade",
+            path: `${dir}/Hair/Hair_Transparent_Fade.png`,
+            weight: 10,
+          },
+          
+          
+        ],
+        position: { x: 0, y: 0 },
+        size: { width: width, height: height },
+      },
+      {
+        name: "Brows",
+        elements: [
+          {
+            id: 0,
+            name: "Black Brow",
+            path: `${dir}/BRow/Brow_Black.png`,
             weight: 100,
           },
           {
             id: 1,
-            name: "Pink",
-            path: `${dir}/8-hair/Pink.png`,
-            weight: 91,
+            name: "Brown Brow",
+            path: `${dir}/BRow/Brow_Black.png`,
+            weight: 90,
           },
         ],
         position: { x: 0, y: 0 },
         size: { width: width, height: height },
       },
       {
-        name: "Accessories",
+        name: "Glasses",
         elements: [
           {
             id: 0,
-            name: "No accessories",
-            path: `${dir}/9-accessories/NoAcc.png`,
+            name: "No Glasses",
+            path: `${dir}/Glasses/No.png`,
             weight: 100,
           },
+          {
+            id: 1,
+            name: "3D Glasses",
+            path: `${dir}/Glasses/Glasses_3D.png`,
+            weight: 50,
+          },
+         
+          {
+            id: 2,
+            name: "EyePatch Left",
+            path: `${dir}/Glasses/Glasses_EyePatch_Left.png`,
+            weight: 40,
+          },
+          {
+            id: 3,
+            name: "EyePatch Right",
+            path: `${dir}/Glasses/Glasses_EyePatch.png`,
+            weight: 30,
+          },
+          {
+            id: 4,
+            name: "Gold Glasses",
+            path: `${dir}/Glasses/Glasses_Gold.png`,
+            weight: 20,
+          },
+          {
+            id: 5,
+            name: "EyeBand",
+            path: `${dir}/Glasses/Glasses_Headband.png`,
+            weight: 15,
+          },
+          {
+            id: 6,
+            name: "OneEyed Glasses",
+            path: `${dir}/Glasses/Glasses_OneEyed.png`,
+            weight: 10,
+          },
+          {
+            id: 7,
+            name: "OverSized Glasses",
+            path: `${dir}/Glasses/Glasses_OverSized.png`,
+            weight: 5,
+          },
+          {
+            id: 8,
+            name: "OverSized Glasses 2",
+            path: `${dir}/Glasses/Glasses_OverSized2.png`,
+            weight: 4,
+          },
+          {
+            id: 9,
+            name: "ThugLife Glasses",
+            path: `${dir}/Glasses/Glasses_ThugLife.png`,
+            weight: 3,
+          },
+          
         ],
         position: { x: 0, y: 0 },
         size: { width: width, height: height },
       },
-      {
-        name: "Headwear",
-        elements: [
-          {
-            id: 0,
-            name: "Glass dome",
-            path: `${dir}/10-headwear/GlassDome.png`,
-            weight: 100,
-          },
-        ],
-        position: { x: 0, y: 0 },
-        size: { width: width, height: height },
-      },
+      
     ],
   },
 };
